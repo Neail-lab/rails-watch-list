@@ -15,7 +15,9 @@ require "open-uri"
 require "json"
 
 puts "----------------Supression------------"
-Movie.delete_all
+Bookmark.destroy_all
+Movie.destroy_all
+List.destroy_all
 puts "---------------- Ajout----------------"
 url = "https://tmdb.lewagon.com/movie/top_rated"
     user_serialized = URI.parse(url).read

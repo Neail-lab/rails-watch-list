@@ -1,0 +1,15 @@
+<div class="container text-center">
+  <h1><%= "Voici les films de la list : #{@list.name}" %></h1>
+  <div class="d-flex flex-wrap">
+  <% @list.movies.each do |l| %>
+    <div class="card m-1" style="width: 18rem;">
+      <img class="card-img-top" src=<%= l.poster_url %> alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= l.title %></h5>
+        <p class="card-text"><%= l.overview %></p>
+    </div>
+  </div>
+  <% end %>
+</div>
+<%= link_to "Revenir a la liste !", lists_path(@list), class:"btn btn-primary button" %></a>
+<%= link_to "Rajouter des films !", new_list_bookmark_path(@list), class:"btn btn-primary button" %></a>
