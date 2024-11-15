@@ -11,7 +11,7 @@
       </div>
     <% @lists.each do |l| %>
       <div class="card m-1" style="width: 18rem;">
-        <img class="card-img-top" src="<%= l.image_url %>" alt="Card image cap">
+          <%= cl_image_tag l.photo.key, height: 300, width: 400, crop: :fill, class:"card-img-top" %>
         <div class="card-body">
           <h5 class="card-title"><%= l.name %></h5>
           <p class="card-text">Description</p>
