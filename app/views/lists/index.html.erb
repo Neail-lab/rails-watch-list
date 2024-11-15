@@ -16,6 +16,7 @@
           <h5 class="card-title"><%= l.name %></h5>
           <p class="card-text">Description</p>
           <%= link_to "Infos", list_path(l), class:"btn btn-primary button" %></a>
+          <%= link_to "Supprimer", list_path(l), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-primary button" %></a>
         </div>
       </div>
     <% end %>

@@ -8,6 +8,7 @@
         <h5 class="card-title"><%= l.title %></h5>
         <p class="card-text"><%= l.overview %></p>
     </div>
+    <%= link_to "Supprimer le film", bookmark_path(l.bookmarks.find_by(list: @list)), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-primary button" %></a>
   </div>
   <% end %>
 </div>
